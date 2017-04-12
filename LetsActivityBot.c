@@ -44,7 +44,7 @@ int main()
   high(26);
 
 
-  char inputString[] = {0, 0, 0, 0, 0, 0};
+  char inputString[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
   int inputStringLength = 10;
   int sPos = 0;
 
