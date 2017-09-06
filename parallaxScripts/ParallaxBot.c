@@ -3,7 +3,7 @@
 */
 #include "simpletools.h"
 #include "fdserial.h"
-#include "abdrive.h"
+#include "abdrive360.h"
 #include "ping.h"
 #include "servo.h"
 #include "ws2812.h"
@@ -75,6 +75,13 @@ int pingDistance;
 
 int main()
 {
+  
+   //variables for adjusting the encoded servos:
+   setKpMin(6);
+   //setKpDistDen(8);
+  // setKilncrement(1);
+//   setScaleXferFunct(200);
+   
 	//access the simpleIDE terminal
 	simpleterm_close();
 	//set full-duplex serialization for the terminal
