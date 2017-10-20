@@ -1,11 +1,17 @@
 /**
 * This is the main twitchBot program file.
 */
+#define USING_360_SERVOS
+
 #include "simpletools.h"
 #include "fdserial.h"
 #include "abdrive360.h"
 #include "ping.h"
-#include "servo.h"
+#ifdef USING_360_SERVOS
+  #include "servo360.h"
+#else
+  #include "servo.h"
+#endif  
 #include "ws2812.h"
 
 //#define STRING //Defines whether its String Fury or not
@@ -77,7 +83,7 @@ int main()
 {
   
    //variables for adjusting the encoded servos:
-   setKpMin(6);
+   //setKpMin(6);
    //setKpDistDen(8);
   // setKilncrement(1);
 //   setScaleXferFunct(200);
