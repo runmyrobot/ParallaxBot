@@ -1,0 +1,7 @@
+wget http://downloads.parallax.com/plx/software/side/100b094/SimpleIDE_0-9-45_armv6l-RaspberryPi-Linux.tar.bz2
+bunzip2 -vv SimpleIDE_0-9-45_armv6l-RaspberryPi-Linux.tar.bz2
+tar -xvf SimpleIDE_0-9-45_armv6l-RaspberryPi-Linux.tar
+cd SimpleIDE-0-9-45
+sudo ./setup.sh install
+/opt/parallax/bin/./propeller-load -Dreset=dtr -I /opt/parallax/propeller-load/ -b ACTIVITYBOARD /home/pi/ParallaxBot/parallaxScripts/cmm/ParallaxBot.elf -e -r -p /dev/ttyUSB0
+
